@@ -18,7 +18,7 @@ function App() {
   const [posts,setPosts]=React.useState([]);
   React.useEffect(()=>{
     axios
-    .get(`/articles`)
+    .get(`https://crud-blog-app-mern.herokuapp.com/articles`)
     .then(res=>setPosts(res.data))
     .catch(err=>console.log(err));
   })

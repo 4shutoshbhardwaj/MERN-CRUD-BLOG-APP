@@ -17,7 +17,7 @@ function DeleteArticle() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/articles/${id}`)
+      .get(`https://crud-blog-app-mern.herokuapp.com/articles/${id}`)
       .then(res => {
         setTitle(res.data.title);
         setArticle(res.data.article);
@@ -29,7 +29,7 @@ function DeleteArticle() {
 
   const deleteArticle=()=>{
     axios
-      .delete(`http://localhost:8080/articles/${id}`)
+      .delete(`https://crud-blog-app-mern.herokuapp.com/articles/${id}`)
       .then(res => console.log(res))
       .catch(err => console.log(err));
       navigate("/");

@@ -18,7 +18,7 @@ const AddArticle = () => {
             authorName
         }
 
-        axios.post('/articles/add', articleData)
+        axios.post('https://crud-blog-app-mern.herokuapp.com/articles/add', articleData)
         .then(res=>{
             console.log(res.data);
             alert("Article has been posted");

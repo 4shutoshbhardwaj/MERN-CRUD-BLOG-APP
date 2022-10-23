@@ -18,7 +18,7 @@ function EditArticle() {
 
   React.useEffect(()=>{
     axios
-    .get(`http://localhost:8080/articles/${id}`)
+    .get(`https://crud-blog-app-mern.herokuapp.com/articles/${id}`)
     .then(res=>{
       setTitle(res.data.title);
       setArticle(res.data.article);
@@ -28,7 +28,7 @@ function EditArticle() {
   },[])
 
   const changeOnClick=()=>{
-    axios.put(`http://localhost:8080/articles/update/${id}`,{title,article,authorName})
+    axios.put(`https://crud-blog-app-mern.herokuapp.com/articles/update/${id}`,{title,article,authorName})
     .then(res=>console.log('Updated Successfullt'))
     .catch(err=>console.log(err));
     navigate("/");

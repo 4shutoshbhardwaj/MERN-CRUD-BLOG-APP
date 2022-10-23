@@ -15,7 +15,7 @@ const Article = () => {
 
     useEffect(()=>{
         axios
-        .get(`http://localhost:8080/articles/${id}`)
+        .get(`https://crud-blog-app-mern.herokuapp.com/articles/${id}`)
         .then(res=>{
             setTitle(res.data.title);
             setArticle(res.data.article);
