@@ -22,7 +22,7 @@ connection.once("open",()=>console.log('mongodb connected'));
 const articlesRouter=require('./routes/articles');
 app.use('/articles',articlesRouter);
 
-app.arguments("/",(req,res)=>{
+app.use("/",(req,res)=>{
     res.json("server started");
 })
 
