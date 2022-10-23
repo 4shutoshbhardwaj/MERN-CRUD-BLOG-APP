@@ -18,7 +18,7 @@ function App() {
   const [posts,setPosts]=React.useState([]);
   React.useEffect(()=>{
     axios
-    .get(`http://localhost:8080/articles`)
+    .get(`/articles`)
     .then(res=>setPosts(res.data))
     .catch(err=>console.log(err));
   })
