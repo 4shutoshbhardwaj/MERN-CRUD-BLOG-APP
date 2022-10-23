@@ -22,4 +22,8 @@ connection.once("open",()=>console.log('mongodb connected'));
 const articlesRouter=require('./routes/articles');
 app.use('/articles',articlesRouter);
 
+app.arguments("/",(req,res)=>{
+    res.json("server started");
+})
+
 app.listen(port,()=>{console.log(`listening to port http://localhost:${port}`)})
